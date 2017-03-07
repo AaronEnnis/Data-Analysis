@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block body %}
+<form>
+	<div>
+		<h1>Results</h1>
+		<p><b>Files that have been analysed</b></p>				
+		 <ol>
+			{% for f in files %}
+				<li>
+					<input type="hidden" name="file_handles[]" value="{{ f }}"/> {{ f }}
+				</li>
+			{% endfor %}
+		</ol>
+		<hr>
+		<p>*NOTE: The number associated with the file name corresponds with the number associated with the data* </p>
+		<hr>
+		<p><b>All data from results</b></p>				
+		 <ol>
+			{% for d in data %}
+				<li>
+					<input type="hidden" name="data_handles[]" value="{{ d }}"/> {{ d }}
+				</li><br><hr>
+			{% endfor %}
+		</ol>
+		
+		 <input type="BUTTON" name="back" onclick="window.location.href='http://127.0.0.1:5000/'" value="Back">
+	</div>
+  
+</form>
+{% endblock %}

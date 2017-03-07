@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+	 
+	{% block body %}
+	<h1>{{file}}</h1>
+	<hr>
+	<p>Word Frequency</p>
+	<p>{{frequency}}</p>
+	<hr><br><br>
+	<p>Associated words</p>	
+	<p>{{json_words}}</p>	
+	<hr><br><br>
+	<p>Invalid Words</p>
+	<p>{{invalid}}</p>
+	<hr><br>
+	<input type="BUTTON" name="back" onclick="window.location.href='http://127.0.0.1:5000/'" value="Back">
+	<input type="BUTTON" name="results" onclick="window.location.href='http://127.0.0.1:5000/results'" value="Results">
+	{% endblock %}
+	

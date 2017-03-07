@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block body %}
+<form method=post action="/upload" enctype=multipart/form-data>
+	<div>
+		<h1>Upload new File</h1>
+      <p><input type=file name=file>
+         <input type=submit value=Upload><br><br>
+		 <input type="BUTTON" name="results" onclick="window.location.href='http://127.0.0.1:5000/results'" value="Results">
+	</div>
+</form>
+{% endblock %}
+	
+	
